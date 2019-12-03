@@ -1,0 +1,260 @@
+/* Title */
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+	margin-top: 20px;
+	color: #3b3531;
+}
+
+/* Section 1 Setup */
+#section-1{
+	background-image: linear-gradient(#c7b18b, #c7b18b, #e8e0a5, #e8e0a5);
+	font-family: 'PT Serif', serif;
+}
+
+/* Fruit Table */
+#tree-table {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-end;
+	margin-bottom: 100px;
+}
+
+#row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.caption{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.tree-image {
+	height: 200px;
+	width: 200px;
+	margin-top: 25px;
+	margin-bottom: 0px;
+	border-radius: 10%;
+	text-decoration: none;
+}
+
+.tree-image:hover {
+	animation: shake 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Clicking tree effects */
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a.tree:hover {
+	text-decoration: none;
+	color: #3b392e;
+}
+
+a.tree:visited {
+	text-decoration: none;
+	color: #3b392e;
+}
+
+/* Row of Fruit Buttons */
+#fruit-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	left: 0px;
+	top: 50px;
+}
+
+a.fruit-icon {
+	margin: 8px;
+	margin-bottom: 0px;
+}
+
+@keyframes peek {
+	0% {transform: translateY(0px);}
+	50% {transform: translateY(-20px);}
+	100% {transform: translateY(0px);}
+}
+
+a.fruit-icon:hover{
+	animation: peek 1.5s infinite;
+}
+
+#apple {
+	height: 130px;
+	width: 100px;
+	padding-left: 5px
+	padding-right: 5px;
+	margin-bottom: -5px;
+}
+
+#orange {
+	height: 130px;
+	width: 100px;
+	padding-left: 5px
+	padding-right: 5px;
+	padding-top: 5px;
+}
+
+#pear {
+	height: 130px;
+	width: 100px;
+	padding-left: 5px
+	padding-right: 5px;
+	padding-top: 5px;
+}
+
+/* Carousel Row */
+#carousel-row {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	left: 0px;
+	transition: 0.5s left;
+}
+
+#carousel, .description-container {
+	margin: auto;
+	height: 350px;
+	width: 696px;
+}
+
+#carousel {
+	position: relative;
+	border: 3px solid blue;
+	/* Hide stuff that overflows the box */
+	overflow: hidden;
+	border: none;
+	margin-bottom: 0px;
+	padding-bottom: 100px;
+	margin-top: 0px;
+}
+
+/* Description */
+.description-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #dbb48c;
+	margin: auto;
+	border-radius: 25px;
+	border-style: solid;
+	border-color: #424f36;
+	border-width: 2px;
+}
+
+.fruit-container{
+	margin: auto;
+	height: 300px;
+	width: 232px;
+}
+
+.fruit-image {
+	height: 200px;
+	width: 150px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 75px;
+	margin-right: 35px;
+	border-radius: 10%;
+}
+
+.fruit-image:hover {
+	animation: wiggle 0.5s infinite;
+}
+
+@keyframes wiggle {
+	0% {transform:rotate(7deg);}
+	50% {transform:rotate(-7deg);}
+	100% {transform:rotate(7deg);}
+}
+
+.description-text{
+	height: 300px;
+	width: 350px;
+	margin-left: 50px;
+	margin-right: 0px;
+	margin-top: 40px;
+	padding-right: 60px;
+	text-align: justify;
+}
+
+.description-title {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Buttons */
+#button-next,
+#button-previous {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+} 
+
+#carousel-controls {
+    /* vertically center */
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+
+    /* spacing between the two buttons */
+    width: 98%;
+    left: 7px;
+    display: flex;
+    justify-content: space-between;
+
+    /* appear in front of images */
+    z-index: 1;
+}
+
+#uparrow {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#uparrow-image {
+	width: 30px;
+	height: 30px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
